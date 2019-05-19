@@ -13,9 +13,6 @@ public class UserService {
     @Autowired
     UserDAO userDAO;
 
-    /**
-     * 根据id获得用户对象
-     */
     public User getUser(int id) {
         return userDAO.selectById(id);
     }

@@ -2,6 +2,7 @@ package com.nowcoder.dao;
 
 import com.nowcoder.ToutiaoApplication;
 import com.nowcoder.model.News;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

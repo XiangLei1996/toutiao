@@ -13,8 +13,6 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-//实际上已经导入进来了？反正运行没有问题
-
 import java.util.Date;
 import java.util.Random;
 
