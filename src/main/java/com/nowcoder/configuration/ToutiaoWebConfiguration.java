@@ -1,5 +1,6 @@
 package com.nowcoder.configuration;
 
+import com.nowcoder.interceptor.LoginRequireInterceptor;
 import com.nowcoder.interceptor.PassportInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -20,9 +21,13 @@ public class ToutiaoWebConfiguration extends WebMvcConfigurerAdapter {
     @Autowired
     PassportInterceptor passportInterceptor;
 
+    @Autowired
+    LoginRequireInterceptor loginRequireInterceptor;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(passportInterceptor);
+        registry.addInterceptor(loginRequireInterceptor).addPathPatterns("/setting/");//只拦截到指定部分的url
         super.addInterceptors(registry);
     }
 }

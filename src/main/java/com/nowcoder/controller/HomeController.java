@@ -39,9 +39,11 @@ public class HomeController {
     }
 
     @RequestMapping(path = {"/user/{userId}/"}, method = {RequestMethod.GET, RequestMethod.POST})
-    public String userIndex(@PathVariable("userId") int userId, Model model) {
+    public String userIndex(@PathVariable("userId") int userId, Model model,
+                            @RequestParam(value = "pop", defaultValue = "0") String pop) {
 
         model.addAttribute("vos", getNews(userId, 0, 10));
+        model.addAttribute("pop", pop);//用于判断是否自动弹出登录框--前端所需参数
         return "home";
     }
 
