@@ -23,6 +23,14 @@ public class UserService {
     LoginTicketDAO loginTicketDAO;
 
     /**
+     * 登出（通过ticket来退出的方式）
+     */
+    public void logout(String ticket){
+        //将该ticket对象的status设置为1，说明已经失效
+        loginTicketDAO.updateStatus(ticket, 1);
+    }
+
+    /**
      * @param username 用户名
      * @param password 密码
      * @return 返回的 map 存储前端视图所要用的提示信息
