@@ -31,3 +31,4 @@ CREATE TABLE `login_ticket` (
   `status` INT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `ticket_UNIQUE` (`ticket` ASC));
+
