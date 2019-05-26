@@ -16,6 +16,23 @@ public class ToutiaoUtil {
     private final static Logger logger = LoggerFactory.getLogger(ToutiaoUtil.class);
 
     /**
+     * 用于上传图片的工具类部分
+     */
+
+    public static String TOUTIAO_DOMAIN = "http://127.0.0.1:8080/";
+    public static String IMAGE_DIR = "D:/upload/";
+    public static String[] IMAGE_FILE_EXTD = new String[] {"png", "bmp", "jpg", "jpeg"};
+
+    public static boolean isFileAllowed(String fileName) {
+        for (String ext : IMAGE_FILE_EXTD) {
+            if (ext.equals(fileName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
      * 工具类里的方法写成静态方法
      */
     public static String getJsonString(int code){

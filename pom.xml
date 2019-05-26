@@ -74,6 +74,13 @@
 			<version>4.2.6.RELEASE</version>
 		</dependency>
 
+		<!-- 导入七牛云的依赖 -->
+		<dependency>
+			<groupId>com.qiniu</groupId>
+			<artifactId>qiniu-java-sdk</artifactId>
+			<version>7.1.1</version>
+		</dependency>
+
 	</dependencies>
 	
 	<build>
