@@ -96,6 +96,7 @@ public class LoginController {
                 if(rememberme > 0){//如果用户有需求，则将有效时间设置的更长
                     cookie.setMaxAge(3600*24*5);//设置5天时间，不写默认浏览器关闭即失效
                 }
+                response.addCookie(cookie);
                 return ToutiaoUtil.getJsonString(0,"登录成功");
             }else{
                 return ToutiaoUtil.getJsonString(1,map);
